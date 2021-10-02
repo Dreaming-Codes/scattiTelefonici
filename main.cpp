@@ -8,15 +8,15 @@
 using namespace std;
 
 void waitForKey() {
-#ifdef _WINDOWS
-    system("PAUSE");
-#else
-    //Ignoro gli endl o "\n" dei cout precedenti
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    do {
-        cout << "Premi Enter per terminare il programma.";
-    } while (cin.get() == NULL);
-#endif
+    #ifdef _WINDOWS
+        system("PAUSE");
+    #else
+        //Ignoro gli endl o "\n" dei cout precedenti
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        do {
+            cout << "Premi Enter per terminare il programma.";
+        } while (cin.get() == NULL);
+    #endif
 }
 
 int main() {
